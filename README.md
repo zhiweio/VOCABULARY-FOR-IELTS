@@ -41,7 +41,6 @@ $ ./eudic-cli.py txt IELTS.xlsx IELTS.txt
 3. 解释支持html格式
 4. 支持解释内跳转 例如 <a href="dic://abc">test</a>
 
-### Ref:
+### TXT 转 eudic 词库
 
-* [欧路词库编辑器 -《欧路词典》的词库制作工具
-  ](http://www.francochinois.com/download/eudic_builder.zip)
+参照 [欧路词库编辑器](http://www.eudic.net/eudic/builder.aspx)
