@@ -63,11 +63,9 @@ def to_txt(input, output, chapter):
         content = []
         for x in records:
             word = x["words"]
-            desc1 = "<br>".join(x["interpretations"].split("\n"))
-            desc2 = "<br>".join(x["phrases"].split("\n"))
-            desc3 = "<br>".join(x["examples"].split("\n"))
-            descriptions = [desc1, desc2, desc3]
-            descriptions = [x for x in descriptions if x]
+            phrases = "<br>".join(x["phrases"].split("\n"))
+            examples = "<br>".join(x["examples"].split("\n"))
+            descriptions = [x for x in [phrases, examples] if x]
             descriptions = "<br>".join(descriptions)
             content.append(f"{word}@{descriptions}\n")
         output.writelines(content)
