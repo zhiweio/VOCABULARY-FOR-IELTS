@@ -13,7 +13,7 @@
 [IELTS.eudic](./IELTS.eudic)
 
 词库完成
-- [ ] Chapter 01
+- [x] Chapter 01
 - [ ] Chapter 02
 - [ ] Chapter 03
 - [ ] Chapter 04
