@@ -1,11 +1,24 @@
 #!/usr/bin/env python3
 
 import sys
+import unicodedata
 
 import click
 import openpyxl
 import pandas as pd
 from bs4 import BeautifulSoup
+
+
+def half2full(s):
+    ret = []
+    for char in s:
+        if unicodedata.east_asian_width(char) in ("F", "W"):
+            ret.append(char)
+        elif unicodedata.category(char) == "Mn":
+            ret.append(unicodedata.normalize("NFKC", char))
+        else:
+            ret.append(unicodedata.normalize("NFKC", char))
+    return "".join(ret)
 
 
 @click.group()
@@ -20,13 +33,11 @@ def cli():
 def to_excel(input, output, chapter):
     html = input.read()
     soup = BeautifulSoup(html, "html.parser")
-    data = {"words": [], "interpretations": []}
+    data = {"words": []}
     for tr in soup.find_all("tr")[1:]:
         td_list = tr.find_all("td")
         word = td_list[1].text.strip()
-        interpretation = td_list[2].text.strip()
         data["words"].append(word)
-        data["interpretations"].append(interpretation)
 
     df = pd.DataFrame(data)
     df["phrases"] = ""
@@ -56,6 +67,8 @@ def to_txt(input, output, chapter):
         dfs.append(df)
 
     df = pd.concat(dfs).fillna("")
+    df["phrases"] = df["phrases"].apply(half2full)
+    df["examples"] = df["examples"].apply(half2full)
     if output.name == "<stdout>":
         print(df)
     else:
