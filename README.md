@@ -2,6 +2,42 @@
 
 《雅思词汇真经》欧陆词典词库整理
 
+## 资料
+
+### 音频
+
+[Bilibili - 雅思词汇真经】单词+例句带读](https://www.bilibili.com/video/BV1Tv4y1R7Gp/?p=1&t=633)
+
+### 词库
+
+[IELTS.eudic](./IELTS.eudic)
+
+词库完成
+- [ ] Chapter 01
+- [ ] Chapter 02
+- [ ] Chapter 03
+- [ ] Chapter 04
+- [ ] Chapter 05
+- [ ] Chapter 06
+- [ ] Chapter 07
+- [ ] Chapter 08
+- [ ] Chapter 09
+- [ ] Chapter 10
+- [ ] Chapter 11
+- [ ] Chapter 12
+- [ ] Chapter 13
+- [ ] Chapter 14
+- [ ] Chapter 15
+- [ ] Chapter 16
+- [ ] Chapter 17
+- [ ] Chapter 18
+- [ ] Chapter 19
+- [ ] Chapter 20
+- [ ] Chapter 21
+- [ ] Chapter 22
+
+## 词库制作
+
 ### 生词本列表打印后的 HTML 转 Excel
 
 ```shell
