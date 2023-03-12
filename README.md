@@ -12,7 +12,23 @@
 
 [IELTS.eudic](./IELTS.eudic)
 
+词库预览
+
+<table>
+  <tr>
+    <td>Details</td>
+    <td>List</td>
+    <td>Preview</td>
+  </tr>
+  <tr>
+    <td><img src="docs/pics/Dictionary_info.PNG" width=270 height=480></td>
+    <td><img src="docs/pics/Dictionary_words_list.PNG" width=270 height=480></td>
+    <td><img src="docs/pics/Dictionary_words_preview.PNG" width=270 height=480></td>
+  </tr>
+</table>
+
 词库完成
+
 - [x] Chapter 01
 - [ ] Chapter 02
 - [ ] Chapter 03
